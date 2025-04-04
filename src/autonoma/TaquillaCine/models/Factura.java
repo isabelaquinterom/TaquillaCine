@@ -18,26 +18,21 @@ public class Factura {
     }
     
     public void imprimirFactura() {
-        System.out.println("==============================================");
-        System.out.println("FACTURA DE VENTA #" + numeroFactura);
-        System.out.println("==============================================");
+        System.out.println("Factura de venta #" + numeroFactura);
         System.out.println("Fecha de emisión: " + fechaEmision);
         System.out.println("Fecha de venta: " + venta.getFecha());
-        System.out.println("----------------------------------------------");
-        System.out.println("DETALLE DE COMPRA:");
+        System.out.println("Detalle completo:");
         
         for (Boleta boleta : venta.getBoletas()) {
-            System.out.println("\nPELÍCULA: " + boleta.getPelicula().getTitulo());
+            System.out.println("\nPELICULA: " + boleta.getPelicula().getTitulo());
             System.out.println("SALA: " + boleta.getNumeroSala() + " | ASIENTO: " + boleta.getAsiento());
-            System.out.println("FUNCIÓN: " + boleta.getFuncion().getHora());
+            System.out.println("FUNCION: " + boleta.getFuncion().getHora());
             System.out.println("CLIENTE: " + boleta.getUsuario().getNombre());
             System.out.println("VALOR: $" + String.format("%.2f", boleta.getCostoFinal()));
         }
         
-        System.out.println("----------------------------------------------");
         System.out.println("TOTAL A PAGAR: $" + String.format("%.2f", venta.getTotalVenta()));
-        System.out.println("==============================================");
-        System.out.println("¡Gracias por su compra!");
+        System.out.println("Gracias por su compra");
     }
     
     public int getNumeroFactura() {

@@ -20,6 +20,6 @@ public abstract class Funcion {
         return porcentajeDescuento;
     }
     
-    // Método abstracto que deben implementar las clases hijas
+    // Metodo abstracto que deben implementar las clases hijas
     public abstract void calcularDescuentoFuncion();
 }
