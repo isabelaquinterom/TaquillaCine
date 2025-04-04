@@ -6,8 +6,23 @@ package autonoma.TaquillaCine.models;
 
 /**
  *
- * @author Asus
+ * @author Asus Isabela Quintero
  */
-public class UsuarioNino {
+public class UsuarioNino extends Usuario {
+     public UsuarioNino(String nombre, String id) {
+        super(nombre, id);
+        calcularDescuentoUsuario();
+    }
     
+    @Override
+    public void calcularDescuentoUsuario() {
+        // Los niños tienen un 20% de descuento
+        this.valorDescuento = 0.20;
+    }
+    
+    @Override
+    public String toString() {
+        return "Usuario Niño: " + nombre + " - ID: " + identificacion + 
+               " - Descuento: " + (valorDescuento * 100) + "%";
+    }
 }

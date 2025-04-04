@@ -8,6 +8,23 @@ package autonoma.TaquillaCine.models;
  *
  * @author Asus
  */
-public class UsuarioMayor {
+public class UsuarioMayor extends Usuario {
+    public UsuarioMayor(String nombre, String id) {
+        super(nombre, id);
+        calcularDescuentoUsuario();
+    }
     
+    @Override
+    public void calcularDescuentoUsuario() {
+        // Los adultos mayores tienen un 30% de descuento
+        this.valorDescuento = 0.30;
+    }
+    
+    @Override
+    public String toString() {
+        return "Usuario Mayor: " + nombre + " - ID: " + identificacion + 
+               " - Descuento: " + (valorDescuento * 100) + "%";
+    }
 }
+    
+

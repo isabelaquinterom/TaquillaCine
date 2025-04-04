@@ -23,7 +23,7 @@ public class FuncionNoche extends Funcion {
     
     @Override
     public String toString() {
-        return "Función Noche - Hora: " + hora + " - Descuento: " + (porcentajeDescuento * 100) + "%";
+        return "Funcion Noche - Hora: " + hora + " - Descuento: " + (porcentajeDescuento * 100) + "%";
     }
 }
 
