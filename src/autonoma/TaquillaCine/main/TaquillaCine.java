@@ -227,7 +227,7 @@ public class TaquillaCine {
         String id = scanner.nextLine();
         
         System.out.println("Tipo de usuario:");
-        System.out.println("1. Niño");
+        System.out.println("1. Nino");
         System.out.println("2. Adulto");
         System.out.println("3. Adulto Mayor");
         int tipo = scanner.nextInt();
